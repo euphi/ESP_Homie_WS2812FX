@@ -1,4 +1,8 @@
+.piolibdeps/
+.pioenvs/
+
 # Prerequisites
+#
 *.d
 
 # Compiled Object files
