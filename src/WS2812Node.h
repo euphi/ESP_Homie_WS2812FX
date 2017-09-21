@@ -25,11 +25,11 @@ private:
 	// HomieNode
 	static HomieSetting<long> wsPin;
 	static HomieSetting<long> wsNumber;
-	static HomieSetting<bool> ws800kHz;
+	//static HomieSetting<bool> ws800kHz;
+	static bool settingsInitialized;
+
 
 	WS2812FX ws2812fx;
-	uint8_t mode = 1;
-
 };
 
 #endif /* SRC_WS2812NODE_H_ */
