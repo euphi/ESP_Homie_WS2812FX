@@ -1,5 +1,5 @@
 {
-        "name": "ESP_Homie_WS2812FX"
+        "name": "ESP_Homie_WS2812FX",
         "version": "0.9.0",
         "keywords": "Homie, WS2812, LED, ESP8266",
         "description": "Node to connect WS2812FX to Homie-ESP8266",
