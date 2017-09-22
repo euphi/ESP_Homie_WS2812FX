@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <Homie.h>
 #include <WS2812Node.h>
+#include <LoggerNode.h>
 
 #define FW_NAME "homie-wx2812fx"
 #define FW_VERSION "0.0.3"
