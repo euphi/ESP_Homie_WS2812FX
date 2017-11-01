@@ -1,5 +1,5 @@
 # ESP_Homie_WS2812FX
-HomieNode of Homie-ESP8266 for WS2812FX Library
+HomieNode of [Homie-ESP8266](https://github.com/marvinroger/homie-esp8266) for [WS2812FX](https://github.com/kitesurfer1404/WS2812FX) Library
 
 
 ## openHAB integration
@@ -29,7 +29,7 @@ Frame label="WS2812" {
 }
 ```
 
-### Better scaling for speed
+### Better scaling for speed (percent instead of 8bit)
 
 Change item `lab_ws_speed` to:
 ```
