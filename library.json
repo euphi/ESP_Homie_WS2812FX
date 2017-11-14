@@ -17,6 +17,9 @@
                 },
 		{
 			"name": "HomieLoggerNode"
+		},
+		{
+			"name": "WS2812FX"
 		}
         ]
 }
