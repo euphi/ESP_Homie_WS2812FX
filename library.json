@@ -13,7 +13,7 @@
         [
                 {
                         "name": "Homie",
-                        "version": "https://github.com/marvinroger/homie-esp8266.git#develop"
+                        "version": "https://github.com/marvinroger/homie-esp8266.git#ec03fd50f53243c5bb4eca37d5169f9e83b9d6d9"
                 },
 		{
 			"name": "HomieLoggerNode"
