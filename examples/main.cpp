@@ -21,7 +21,6 @@ void setup() {
   Serial.begin(74880);
   Serial.println("Start");
   Serial.flush();
-  Serial.println("Setup");
   Homie.setup();
 }
 
