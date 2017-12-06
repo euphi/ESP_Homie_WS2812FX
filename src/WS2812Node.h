@@ -13,7 +13,7 @@
 
 class WS2812Node: public HomieNode {
 public:
-	WS2812Node();
+	WS2812Node(const char* name, int8_t pin=-1);
 
 protected:
 	virtual void setup() override;
@@ -27,6 +27,8 @@ private:
 	static HomieSetting<long> wsNumber;
 	//static HomieSetting<bool> ws800kHz;
 	static bool settingsInitialized;
+
+	int8_t customPin;
 
 
 	WS2812FX ws2812fx;

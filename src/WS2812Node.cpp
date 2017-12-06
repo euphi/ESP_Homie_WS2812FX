@@ -20,8 +20,9 @@ bool WS2812Node::settingsInitialized(false);
 
 // ^^^ end of static part ^^^
 
-WS2812Node::WS2812Node() :
-		HomieNode("WS2812FX", "WS-LED-Strip"),
+WS2812Node::WS2812Node(const char* name, int8_t pin) :
+		HomieNode(name, "WS-LED-Strip"),
+		customPin(pin),
 		ws2812fx(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800) {
 	if (!settingsInitialized) {
 		settingsInitialized = true;
@@ -39,10 +40,10 @@ WS2812Node::WS2812Node() :
 }
 
 void WS2812Node::setup() {
-	  ws2812fx.setPin(wsPin.get());
+	  ws2812fx.setPin(customPin==-1 ? wsPin.get(): customPin);
 	  ws2812fx.setLength(wsNumber.get());
 	  ws2812fx.init();
-	  ws2812fx.setBrightness(100);
+	  ws2812fx.setBrightness(BRIGHTNESS_MAX);
 	  ws2812fx.setSpeed(100);
 	  ws2812fx.setMode(FX_MODE_BREATH);
 	  ws2812fx.start();
@@ -75,6 +76,24 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 		Serial.printf("New mode: %x", new_mode); // TODO: Log success
 		ws2812fx.setMode(new_mode);
 		setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
+		switch (ws2812fx.getMode()) {
+			case 2: // Breath mode
+				LN.log("WS2812::handleInput", LoggerNode::INFO, "Breath mode");
+				ws2812fx.setColor(255,200,9);
+				ws2812fx.setSpeed(200);
+				break;
+			case 45:
+			case 46:  // Fire flicker
+			case 47:  //    (intense)
+			case 48:
+				LN.log("WS2812::handleInput", LoggerNode::INFO, "Fire flicker mode");
+				//ws2812fx.setColor(255, 69,3);
+				ws2812fx.setColor(255, 120,3);
+				ws2812fx.setSpeed(210);
+				break;
+			default: // nothing to do
+				break;
+		}
 		return true;
 	}
 	if (property.equals("brightness")) {

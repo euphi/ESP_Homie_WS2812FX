@@ -1,6 +1,10 @@
 .piolibdeps/
 .pioenvs/
 
+#This is a library, so there shall be no main.cpp
+src/main.cpp
+
+
 # Prerequisites
 #
 *.d
@@ -34,3 +38,5 @@
 *.exe
 *.out
 *.app
+.pioenvs
+.piolibdeps

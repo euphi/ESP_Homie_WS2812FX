@@ -28,13 +28,76 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/variants/generic"/>
 									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESP8266_SSD1306"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieNodeCollection_ID1407/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28@1.0.7"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit PN532_ID29"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ArduinoJson_ID64/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/AsyncMqttClient_ID346/src"/>
-									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Automaton_ID545/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Bounce2_ID1106"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/HomieLoggerNode_ID1852/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Sensors_ID578/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/WS2812FX_ID1647"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
@@ -81,13 +144,76 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/variants/generic"/>
 									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESP8266_SSD1306"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieNodeCollection_ID1407/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28@1.0.7"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit PN532_ID29"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ArduinoJson_ID64/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/AsyncMqttClient_ID346/src"/>
-									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Automaton_ID545/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Bounce2_ID1106"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/HomieLoggerNode_ID1852/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Sensors_ID578/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/WS2812FX_ID1647"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
@@ -134,13 +260,76 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/variants/generic"/>
 									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Automaton_ID545/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESP8266_SSD1306"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ArduinoJson_ID64/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/ESPAsyncTCP/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/AsyncMqttClient_ID346/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Bounce2_ID1106"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Homie/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieLoggerNode/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/HomieNodeCollection_ID1407/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/Coding/ESP_Projects/ESP_Homie_WS2812FX/.piolibdeps/WS2812FX_ID1647"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit NeoPixel_ID28@1.0.7"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Adafruit PN532_ID29"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ArduinoJson_ID64/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/AsyncMqttClient_ID346/src"/>
-									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Automaton_ID545/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Bounce2_ID1106"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/ESPAsyncTCP_ID305/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/HomieLoggerNode_ID1852/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/Sensors_ID578/src"/>
+									<listOptionValue builtIn="false" value="${HOME}/.platformio/lib/WS2812FX_ID1647"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>

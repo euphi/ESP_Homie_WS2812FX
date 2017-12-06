@@ -64,3 +64,4 @@ install:
 
 script:
     - platformio ci --lib="." --board=esp01
+    - platformio ci --lib="." --board=d1_mini
