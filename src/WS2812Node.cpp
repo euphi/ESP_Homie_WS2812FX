@@ -20,7 +20,7 @@ bool WS2812Node::settingsInitialized(false);
 
 // ^^^ end of static part ^^^
 
-WS2812Node::WS2812Node(const char* name, int8_t pin) :
+WS2812Node::WS2812Node(const char* name, uint8_t _mode, int8_t pin) :
 		HomieNode(name, "WS-LED-Strip"),
 		customPin(pin),
 		ws2812fx(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800) {
@@ -34,6 +34,7 @@ WS2812Node::WS2812Node(const char* name, int8_t pin) :
 		});
 	//	ws800kHz.setDefaultValue(true);
 	}
+	ws2812fx.setMode(_mode);
 	advertise("mode").settable();
 	advertise("speed").settable();
 	advertise("brightness").settable();
@@ -44,8 +45,9 @@ void WS2812Node::setup() {
 	  ws2812fx.setLength(wsNumber.get());
 	  ws2812fx.init();
 	  ws2812fx.setBrightness(BRIGHTNESS_MAX);
-	  ws2812fx.setSpeed(100);
-	  ws2812fx.setMode(FX_MODE_BREATH);
+	  ws2812fx.setSpeed(210);
+      //ws2812fx.setColor(255, 120,3);
+      ws2812fx.setColor(255, 160,5);
 	  ws2812fx.start();
 }
 
@@ -54,7 +56,7 @@ void WS2812Node::loop() {
 }
 
 void WS2812Node::onReadyToOperate() {
-	ws2812fx.setMode(FX_MODE_STROBE_RAINBOW);
+	//ws2812fx.setMode(FX_MODE_STROBE_RAINBOW);
 	setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
 }
 
@@ -82,13 +84,13 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 				ws2812fx.setColor(255,200,9);
 				ws2812fx.setSpeed(200);
 				break;
-			case 45:
-			case 46:  // Fire flicker
-			case 47:  //    (intense)
+			case FX_MODE_FIRE_FLICKER:
+			case FX_MODE_FIRE_FLICKER_SOFT:  	// Fire flicker
+			case FX_MODE_FIRE_FLICKER_INTENSE:  //    (intense)
 			case 48:
 				LN.log("WS2812::handleInput", LoggerNode::INFO, "Fire flicker mode");
 				//ws2812fx.setColor(255, 69,3);
-				ws2812fx.setColor(255, 120,3);
+				ws2812fx.setColor(255, 160,5);
 				ws2812fx.setSpeed(210);
 				break;
 			default: // nothing to do

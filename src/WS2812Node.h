@@ -13,7 +13,7 @@
 
 class WS2812Node: public HomieNode {
 public:
-	WS2812Node(const char* name, int8_t pin=-1);
+	WS2812Node(const char* name, uint8_t _mode = 0,  int8_t pin=-1);
 
 protected:
 	virtual void setup() override;
