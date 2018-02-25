@@ -20,10 +20,11 @@ bool WS2812Node::settingsInitialized(false);
 
 // ^^^ end of static part ^^^
 
-WS2812Node::WS2812Node(const char* name, uint8_t _mode, int8_t pin) :
+WS2812Node::WS2812Node(const char* name, uint8_t _mode, neoPixelType type, int8_t pin, int16_t count) :
 		HomieNode(name, "WS-LED-Strip"),
 		customPin(pin),
-		ws2812fx(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800) {
+		customCount(count),
+		ws2812fx(LED_COUNT, LED_PIN, type) {
 	if (!settingsInitialized) {
 		settingsInitialized = true;
 		wsPin.setDefaultValue(LED_PIN).setValidator([] (long candidate) {
@@ -42,13 +43,13 @@ WS2812Node::WS2812Node(const char* name, uint8_t _mode, int8_t pin) :
 
 void WS2812Node::setup() {
 	  ws2812fx.setPin(customPin==-1 ? wsPin.get(): customPin);
-	  ws2812fx.setLength(wsNumber.get());
+	  ws2812fx.setLength(customCount==-1 ? wsNumber.get() : customCount);
 	  ws2812fx.init();
 	  ws2812fx.setBrightness(BRIGHTNESS_MAX);
 	  ws2812fx.setSpeed(210);
-      //ws2812fx.setColor(255, 120,3);
       ws2812fx.setColor(255, 160,5);
 	  ws2812fx.start();
+      ws2812fx.service();
 }
 
 void WS2812Node::loop() {
@@ -56,12 +57,11 @@ void WS2812Node::loop() {
 }
 
 void WS2812Node::onReadyToOperate() {
-	//ws2812fx.setMode(FX_MODE_STROBE_RAINBOW);
 	setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
 }
 
 bool WS2812Node::handleInput(const String& property, const HomieRange& range, const String& value) {
-	Serial.printf("handleInput: %s, %s", property.c_str(), value.c_str());
+	LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "new input: %s, %s", property.c_str(), value.c_str());
 	if (property.equals("mode")) {
 		uint8_t new_mode = 0;
 		if (value.equals("next")) {
@@ -70,16 +70,18 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 			new_mode = ws2812fx.getMode() - 1;;
 		} else {
 		    new_mode = value.toInt();
-		    if (new_mode==0) return false; // TODO: Log error
+		    if (new_mode==0) {
+		    	LN.log("WS2812::handleInput", LoggerNode::WARNING, "Invalid mode received");
+		    	return false;
+		    }
 		}
-
 		if (new_mode >= MODE_COUNT) new_mode = 1;
 		if (new_mode < 1) new_mode = MODE_COUNT-1;
-		Serial.printf("New mode: %x", new_mode); // TODO: Log success
+		LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "New mode: %x", new_mode);
 		ws2812fx.setMode(new_mode);
 		setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
 		switch (ws2812fx.getMode()) {
-			case 2: // Breath mode
+			case FX_MODE_BREATH: // Breath mode
 				LN.log("WS2812::handleInput", LoggerNode::INFO, "Breath mode");
 				ws2812fx.setColor(255,200,9);
 				ws2812fx.setSpeed(200);
@@ -87,7 +89,6 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 			case FX_MODE_FIRE_FLICKER:
 			case FX_MODE_FIRE_FLICKER_SOFT:  	// Fire flicker
 			case FX_MODE_FIRE_FLICKER_INTENSE:  //    (intense)
-			case 48:
 				LN.log("WS2812::handleInput", LoggerNode::INFO, "Fire flicker mode");
 				//ws2812fx.setColor(255, 69,3);
 				ws2812fx.setColor(255, 160,5);
@@ -101,21 +102,21 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 	if (property.equals("brightness")) {
 		uint8_t new_brightness = value.toInt();
 		if ((new_brightness < 0) || (new_brightness > 100)) {
-			//TODO: Log ERROR
+	    	LN.log("WS2812::handleInput", LoggerNode::WARNING, "Invalid brightness received");
 			return false;
 		}
 		ws2812fx.setBrightness(new_brightness);
 		setProperty("brightness").send(String(ws2812fx.getBrightness()));
-
 	}
 	if (property.equals("speed")) {
 		uint8_t new_speed = value.toInt();
 		if (new_speed < 10) {
-			LN.logf(__PRETTY_FUNCTION__, LoggerNode::ERROR, "Cannot set new speed value [%s]", value.c_str()); //TODO: Log ERROR
+			LN.logf(__PRETTY_FUNCTION__, LoggerNode::WARNING, "Invalid speed [%s] received", value.c_str());
 			return false;
 		}
 		ws2812fx.setSpeed(new_speed);
 		setProperty("speed").send(String(ws2812fx.getSpeed()));
 	}
+	//TODO: Color
 	return false;
 }

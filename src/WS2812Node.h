@@ -13,7 +13,7 @@
 
 class WS2812Node: public HomieNode {
 public:
-	WS2812Node(const char* name, uint8_t _mode = 0,  int8_t pin=-1);
+	WS2812Node(const char* name, uint8_t _mode = 0,   neoPixelType type = NEO_GBR + NEO_KHZ800, int8_t pin=-1, int16_t count=1);
 
 protected:
 	virtual void setup() override;
@@ -29,6 +29,7 @@ private:
 	static bool settingsInitialized;
 
 	int8_t customPin;
+	int16_t customCount;
 
 
 	WS2812FX ws2812fx;
