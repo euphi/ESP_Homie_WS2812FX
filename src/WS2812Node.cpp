@@ -24,7 +24,9 @@ WS2812Node::WS2812Node(const char* name, uint8_t _mode, neoPixelType type, int8_
 		HomieNode(name, "WS-LED-Strip"),
 		customPin(pin),
 		customCount(count),
-		ws2812fx(LED_COUNT, LED_PIN, type) {
+		ws2812fx(LED_COUNT, LED_PIN, type),
+		dirtBrightness(true), dirtMode(true), dirtSpeed(true),
+		runtimeBrightness(BRIGHTNESS_MAX), runtimeMode(_mode), runtimeSpeed(210) {
 	if (!settingsInitialized) {
 		settingsInitialized = true;
 		wsPin.setDefaultValue(LED_PIN).setValidator([] (long candidate) {
@@ -45,23 +47,37 @@ void WS2812Node::setup() {
 	  ws2812fx.setPin(customPin==-1 ? wsPin.get(): customPin);
 	  ws2812fx.setLength(customCount==-1 ? wsNumber.get() : customCount);
 	  ws2812fx.init();
-	  ws2812fx.setBrightness(BRIGHTNESS_MAX);
-	  ws2812fx.setSpeed(210);
-      ws2812fx.setColor(255, 160,5);
+      //ws2812fx.setColor(255, 160,5);
 	  ws2812fx.start();
       ws2812fx.service();
 }
 
 void WS2812Node::loop() {
+	if (dirtBrightness) {
+		ws2812fx.setBrightness(runtimeBrightness);
+		dirtBrightness = false;
+		setProperty("brightness").send(String(ws2812fx.getBrightness()));
+	}
+	if (dirtMode) {
+		ws2812fx.setMode(runtimeMode);
+		dirtMode = false;
+		setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
+	}
+	if (dirtSpeed) {
+		ws2812fx.setSpeed(runtimeSpeed);
+		dirtSpeed = false;
+		uint8_t speed_per = 100-((ws2812fx.getSpeed()-SPEED_MIN) * 100 / (SPEED_MAX-SPEED_MIN));
+		setProperty("speed").send(String(speed_per));
+	}
 	ws2812fx.service();
 }
 
 void WS2812Node::onReadyToOperate() {
-	setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
+	//setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
 }
 
 bool WS2812Node::handleInput(const String& property, const HomieRange& range, const String& value) {
-	LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "new input: %s, %s", property.c_str(), value.c_str());
+	//LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "new input: %s, %s", property.c_str(), value.c_str());
 	if (property.equals("mode")) {
 		uint8_t new_mode = 0;
 		if (value.equals("next")) {
@@ -77,26 +93,26 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 		}
 		if (new_mode >= MODE_COUNT) new_mode = 1;
 		if (new_mode < 1) new_mode = MODE_COUNT-1;
-		LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "New mode: %x", new_mode);
-		ws2812fx.setMode(new_mode);
-		setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
-		switch (ws2812fx.getMode()) {
-			case FX_MODE_BREATH: // Breath mode
-				LN.log("WS2812::handleInput", LoggerNode::INFO, "Breath mode");
-				ws2812fx.setColor(255,200,9);
-				ws2812fx.setSpeed(200);
-				break;
-			case FX_MODE_FIRE_FLICKER:
-			case FX_MODE_FIRE_FLICKER_SOFT:  	// Fire flicker
-			case FX_MODE_FIRE_FLICKER_INTENSE:  //    (intense)
-				LN.log("WS2812::handleInput", LoggerNode::INFO, "Fire flicker mode");
-				//ws2812fx.setColor(255, 69,3);
-				ws2812fx.setColor(255, 160,5);
-				ws2812fx.setSpeed(210);
-				break;
-			default: // nothing to do
-				break;
-		}
+//		LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "New mode: %x", new_mode);
+		runtimeMode = new_mode;
+		dirtMode = true;
+//		switch (ws2812fx.getMode()) {
+//			case FX_MODE_BREATH: // Breath mode
+//				LN.log("WS2812::handleInput", LoggerNode::INFO, "Breath mode");
+////				ws2812fx.setColor(255,200,9);
+////				ws2812fx.setSpeed(200);
+//				break;
+//			case FX_MODE_FIRE_FLICKER:
+//			case FX_MODE_FIRE_FLICKER_SOFT:  	// Fire flicker
+//			case FX_MODE_FIRE_FLICKER_INTENSE:  //    (intense)
+//				LN.log("WS2812::handleInput", LoggerNode::INFO, "Fire flicker mode");
+//				//ws2812fx.setColor(255, 69,3);
+//				//ws2812fx.setColor(255, 160,5);
+//				//ws2812fx.setSpeed(210);
+//				break;
+//			default: // nothing to do
+//				break;
+//		}
 		return true;
 	}
 	if (property.equals("brightness")) {
@@ -105,17 +121,19 @@ bool WS2812Node::handleInput(const String& property, const HomieRange& range, co
 	    	LN.log("WS2812::handleInput", LoggerNode::WARNING, "Invalid brightness received");
 			return false;
 		}
-		ws2812fx.setBrightness(new_brightness);
-		setProperty("brightness").send(String(ws2812fx.getBrightness()));
+		runtimeBrightness = new_brightness;
+		dirtBrightness = true;
+
 	}
 	if (property.equals("speed")) {
-		uint8_t new_speed = value.toInt();
-		if (new_speed < 10) {
+		int8_t new_speed = value.toInt();
+		if (new_speed < 0 || new_speed > 100) {
 			LN.logf(__PRETTY_FUNCTION__, LoggerNode::WARNING, "Invalid speed [%s] received", value.c_str());
 			return false;
 		}
-		ws2812fx.setSpeed(new_speed);
-		setProperty("speed").send(String(ws2812fx.getSpeed()));
+		runtimeSpeed = (100-new_speed) * ((SPEED_MAX-SPEED_MIN)/100) + SPEED_MIN;
+		LN.logf("WS2812Node::Input_Speed", LoggerNode::DEBUG, "New speed %d [%d]", runtimeSpeed, new_speed);
+		dirtSpeed = true;
 	}
 	//TODO: Color
 	return false;

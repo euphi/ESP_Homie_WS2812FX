@@ -31,6 +31,11 @@ private:
 	int8_t customPin;
 	int16_t customCount;
 
+	uint8_t runtimeBrightness, runtimeMode;
+	uint16_t runtimeSpeed;
+	bool dirtBrightness, dirtMode, dirtSpeed;
+
+
 
 	WS2812FX ws2812fx;
 };
