@@ -13,13 +13,16 @@
 
 class WS2812Node: public HomieNode {
 public:
-	WS2812Node(const char* name, uint8_t _mode = 0,   neoPixelType type = NEO_GBR + NEO_KHZ800, int8_t pin=-1, int16_t count=1);
+	//WS2812Node(const char* name, uint8_t _mode = 0, neoPixelType type = NEO_GBR + NEO_KHZ800, int8_t pin=-1, int16_t count=1);
+	WS2812Node(const char* id, const char* name, uint8_t _mode = 0, neoPixelType type = NEO_GBR + NEO_KHZ800, int8_t pin=-1, int16_t count=1);
+
 
 protected:
 	virtual void setup() override;
 	virtual void loop() override;
 	virtual void onReadyToOperate() override;
-	virtual bool handleInput(const String& property, const HomieRange& range, const String& value) override;
+	virtual bool handleInput(const HomieRange& range, const String& property, const String& value)override;
+
 
 private:
 	// HomieNode

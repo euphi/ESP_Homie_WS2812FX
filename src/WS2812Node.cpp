@@ -20,8 +20,9 @@ bool WS2812Node::settingsInitialized(false);
 
 // ^^^ end of static part ^^^
 
-WS2812Node::WS2812Node(const char* name, uint8_t _mode, neoPixelType type, int8_t pin, int16_t count) :
-		HomieNode(name, "WS-LED-Strip"),
+//2812Node::WS2812Node(const char* name, uint8_t _mode, neoPixelType type, int8_t pin, int16_t count):
+WS2812Node::WS2812Node(const char* id, const char* name, uint8_t _mode, neoPixelType type, int8_t pin, int16_t count):
+		HomieNode(id, name, "LED_FX"),
 		customPin(pin),
 		customCount(count),
 		ws2812fx(LED_COUNT, LED_PIN, type),
@@ -47,12 +48,20 @@ void WS2812Node::setup() {
 	  ws2812fx.setPin(customPin==-1 ? wsPin.get(): customPin);
 	  ws2812fx.setLength(customCount==-1 ? wsNumber.get() : customCount);
 	  ws2812fx.init();
+	  pinMode(ws2812fx.getPin(), OUTPUT);
       //ws2812fx.setColor(255, 160,5);
 	  ws2812fx.start();
       ws2812fx.service();
+      //setRunLoopDisconnected(true);
 }
 
 void WS2812Node::loop() {
+	static uint_fast16_t count = 0;
+	if (count==0) Serial.print("Loop");
+	if ((count++ % 5000) == 0)
+	{
+		Serial.print(".");
+	}
 	if (dirtBrightness) {
 		ws2812fx.setBrightness(runtimeBrightness);
 		dirtBrightness = false;
@@ -73,10 +82,10 @@ void WS2812Node::loop() {
 }
 
 void WS2812Node::onReadyToOperate() {
-	//setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
+	setProperty("mode").send(ws2812fx.getModeName(ws2812fx.getMode()));
 }
 
-bool WS2812Node::handleInput(const String& property, const HomieRange& range, const String& value) {
+bool WS2812Node::handleInput(const HomieRange& range, const String& property, const String& value) {
 	//LN.logf("WS2812::handleInput", LoggerNode::DEBUG, "new input: %s, %s", property.c_str(), value.c_str());
 	if (property.equals("mode")) {
 		uint8_t new_mode = 0;
