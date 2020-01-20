@@ -93,11 +93,15 @@ void WS2812Node::loop() {
 			for (uint_fast8_t j = 0; j < 3; j++) ca [j] = (((uint32_t)color[j][W] << 24)| ((uint32_t)color[j][R] << 16) | ((uint32_t)color[j][G] << 8)| ((uint32_t)color[j][B]));
 			ws2812fx.setColors(0, ca);
 		}
-		if (connected) {
+		if (connected && dirtColor[i]) {
 			setProperty("color").send("0,0,0");
 			dirtColor[i] = false;
+		}
+		if (connected && dirtWhite[i]) {
+			setProperty("white").send(String(color[i][W]));
 			dirtWhite[i] = false;
 		}
+
 	}
 	ws2812fx.service();
 	//delay(1);
@@ -169,6 +173,7 @@ bool WS2812Node::handleInput(const HomieRange& range, const String& property, co
 		if (new_r >= 0 && new_r <= 100) color[no][R] = new_r;
 		if (new_g >= 0 && new_g <= 100) color[no][G] = new_g;
 		if (new_b >= 0 && new_b <= 100) color[no][B] = new_b;
+		dirtColor[no]=true;
 
 	}
 	if (property.startsWith("white")) {
