@@ -9,3 +9,4 @@ src/main.cpp
 
 # Avoid disclosure of Wifi passwords... 
 data/homie/config.json
+/.cproject
