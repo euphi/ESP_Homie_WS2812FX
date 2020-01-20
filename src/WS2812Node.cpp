@@ -88,11 +88,15 @@ void WS2812Node::loop() {
 		if (connected) setProperty("speed").send(String(speed_per));
 	}
 	for (uint_fast8_t i = 0; i<3; i++) {
-		if (connected) setProperty("color").send("0,0,0");
 		if (dirtColor[i] || dirtWhite[i]) {
 			uint32_t ca[3];
 			for (uint_fast8_t j = 0; j < 3; j++) ca [j] = (((uint32_t)color[j][W] << 24)| ((uint32_t)color[j][R] << 16) | ((uint32_t)color[j][G] << 8)| ((uint32_t)color[j][B]));
 			ws2812fx.setColors(0, ca);
+		}
+		if (connected) {
+			setProperty("color").send("0,0,0");
+			dirtColor[i] = false;
+			dirtWhite[i] = false;
 		}
 	}
 	ws2812fx.service();
