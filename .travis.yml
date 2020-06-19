@@ -58,7 +58,7 @@ env:
 
 install:
     - pip install -U platformio
-    - platformio lib -g install https://github.com/marvinroger/homie-esp8266.git#ec03fd50f53243c5bb4eca37d5169f9e83b9d6d9 
+    - platformio lib -g install https://github.com/homieiot/homie-esp8266.git#master 
     - platformio lib -g install HomieLoggerNode 
     - platformio lib -g install WS2812FX
 #    - platformio lib -g update
