@@ -4,7 +4,7 @@
 #include <LoggerNode.h>
 
 #define FW_NAME "homie-wx2812fx"
-#define FW_VERSION "0.3.12"
+#define FW_VERSION "0.4.1"
 
 // first WS2812 Strip with PIN loaded from config.json
 //WS2812Node ws2812Node("Feuer1",  FX_MODE_FIRE_FLICKER_SOFT,NEO_GRB + NEO_KHZ800, -1, 8);
@@ -14,6 +14,8 @@
 
 // third WS2812 Strip with custom pin (4 == D2 (Wemos))
 WS2812Node ws2812Node3("strip", "1st Strip", FX_MODE_RAINBOW_CYCLE, NEO_GRBW + NEO_KHZ800, 4, 429);
+WS2812Node ws2812NodeV("vitrine", "Vitrine Ianis Computermuseum", FX_MODE_RAINBOW_CYCLE, NEO_GRB + NEO_KHZ800, 5, 301);
+
 LoggerNode LN;
 
 void setup() {

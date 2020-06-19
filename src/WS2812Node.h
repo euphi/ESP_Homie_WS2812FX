@@ -38,6 +38,7 @@ private:
 	int16_t customCount;
 
 	WS2812FX ws2812fx;
+	bool usewhite;
 	bool dirtBright, dirtMode, dirtSpeed, dirtColor[3], dirtWhite[3];
 	uint8_t runtimeBrightness, runtimeMode;
 	uint16_t runtimeSpeed;
