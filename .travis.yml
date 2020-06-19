@@ -64,8 +64,6 @@ install:
 #    - platformio lib -g update
 
 script:
-    - platformio ci --lib="." examples/krippenlicht.cpp --board=esp01 --project-option="lib_ldf_mode=chain+"
-    - platformio ci --lib="." examples/krippenlicht.cpp --board=d1_mini --project-option="lib_ldf_mode=chain+"
-    - platformio ci --lib="." examples/simple.cpp --board=esp01 --project-option="lib_ldf_mode=chain+"
-    - platformio ci --lib="." examples/simple.cpp --board=d1_mini --project-option="lib_ldf_mode=chain+"
+    - platformio ci --lib="." examples/simple2.cpp --board=esp01 --project-option="lib_ldf_mode=chain+"
+    - platformio ci --lib="." examples/simple2.cpp --board=d1_mini --project-option="lib_ldf_mode=chain+"
 
