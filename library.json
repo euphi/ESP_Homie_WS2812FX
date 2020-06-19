@@ -1,6 +1,6 @@
 {
         "name": "ESP_Homie_WS2812FX",
-        "version": "0.9.5",
+        "version": "0.9.6",
         "keywords": "Homie, WS2812, LED, ESP8266",
         "description": "Node to connect WS2812FX to Homie-ESP8266",
         "repository": {
@@ -12,8 +12,7 @@
         "dependencies": 
         [
                 {
-                        "name": "Homie",
-                        "version": "https://github.com/marvinroger/homie-esp8266.git#v2.0.0-beta.3"
+                        "name": "Homie"                        
                 },
 		{
 			"name": "HomieLoggerNode"
