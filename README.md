@@ -1,5 +1,5 @@
-# ESP_Homie_WS2812FX
-HomieNode of [Homie-ESP8266](https://github.com/marvinroger/homie-esp8266) for [WS2812FX](https://github.com/kitesurfer1404/WS2812FX) Library
+# ESP_Homie_WS2812FX [![Build Status](https://travis-ci.org/euphi/ESP_Homie_WS2812FX.svg?branch=master)](https://travis-ci.org/euphi/ESP_Homie_WS2812FX) [![platformio](https://img.shields.io/badge/available--at-platformio-orange)](https://platformio.org/lib/show/1857/ESP_Homie_WS2812FX/)
+HomieNode of [Homie-ESP8266](https://github.com/homieiot/homie-esp8266) for [WS2812FX](https://github.com/kitesurfer1404/WS2812FX) Library
 
 
 ## openHAB integration
