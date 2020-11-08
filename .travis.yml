@@ -46,7 +46,7 @@
 
 language: python
 python:
-    - "2.7"
+    - "3.8"
 
 sudo: false
 #cache:
@@ -58,12 +58,12 @@ env:
 
 install:
     - pip install -U platformio
-    - platformio lib -g install https://github.com/homieiot/homie-esp8266.git#master 
+    - platformio lib -g install Homie
     - platformio lib -g install HomieLoggerNode 
     - platformio lib -g install WS2812FX
 #    - platformio lib -g update
 
 script:
-    - platformio ci --lib="." examples/simple2.cpp --board=esp01 --project-option="lib_ldf_mode=chain+"
-    - platformio ci --lib="." examples/simple2.cpp --board=d1_mini --project-option="lib_ldf_mode=chain+"
+    - platformio ci --lib="." examples/simple2.cpp --board=esp01
+    - platformio ci --lib="." examples/simple2.cpp --board=d1_mini
 
