@@ -58,6 +58,7 @@ env:
 
 install:
     - pip install -U platformio
+    - platformio platform install espressif8266
     - platformio lib -g install Homie
     - platformio lib -g install HomieLoggerNode 
     - platformio lib -g install WS2812FX
