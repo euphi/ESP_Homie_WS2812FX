@@ -53,18 +53,20 @@ sudo: false
 #    directories:
 #        - "~/.platformio"
 
-env:
-    - PLATFORMIO_CI_SRC=examples/main.cpp
+#env:
+#    - PLATFORMIO_CI_SRC=examples/main.cpp
 
 install:
     - pip install -U platformio
-    - platformio platform install espressif8266 --with-all-packages
-    - platformio lib -g install Homie
-    - platformio lib -g install HomieLoggerNode 
-    - platformio lib -g install WS2812FX
+      #    - platformio platform install espressif8266 --with-all-packages
+      #    - platformio lib -g install Homie
+      #    - platformio lib -g install HomieLoggerNode 
+      #    - platformio lib -g install WS2812FX
 #    - platformio lib -g update
 
 script:
-    - platformio ci --lib="." examples/simple2.cpp --board=esp01
-    - platformio ci --lib="." examples/simple2.cpp --board=d1_mini
+    - platformio ci --lib="." --project-conf="platformio.ini" examples/simple2.cpp 
+      #    - platformio ci --lib="." examples/simple2.cpp --board=esp01
+      #    - platformio ci --lib="." examples/simple2.cpp --board=d1_mini
+  
 
