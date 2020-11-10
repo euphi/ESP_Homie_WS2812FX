@@ -93,7 +93,7 @@ void WS2812Node::loop() {
 	for (uint_fast8_t i = 0; i < 3; i++) {
 		if (dirtColor[i] || dirtWhite[i]) {
 			uint32_t ca[3];
-			for (uint_fast8_t j = 0; j < 3; j++) ca[j] = (((uint32_t) color[j][W] << 24) | ((uint32_t) color[j][G] << 16) | ((uint32_t) color[j][R] << 8) | ((uint32_t) color[j][B]));
+			for (uint_fast8_t j = 0; j < 3; j++) ca[j] = (((uint32_t) color[j][W] << 24) | ((uint32_t) color[j][R] << 16) | ((uint32_t) color[j][G] << 8) | ((uint32_t) color[j][B]));
 			ws2812fx.setColors(0, ca);
 			if (connected) {
 				LN.logf("WS2812Node::loop", LoggerNode::DEBUG, "WS2812FX Colors: %x, %x, %x", ca[0], ca[1], ca[2]);
@@ -117,7 +117,7 @@ void WS2812Node::loop() {
 		}
 	}
 	ws2812fx.service();
-	//delay(1);
+	yield();
 }
 
 void WS2812Node::onReadyToOperate() {
@@ -154,12 +154,12 @@ bool WS2812Node::handleInput(const HomieRange& range, const String& property, co
 		return true;
 	}
 	if (property.equals("brightness")) {
-		uint8_t new_brightness = value.toInt();
+		uint16_t new_brightness = value.toInt();
 		if ((new_brightness < 0) || (new_brightness > 100)) {
 	    	LN.log("WS2812::handleInput", LoggerNode::WARNING, "Invalid brightness received");
 			return false;
 		}
-		runtimeBrightness = new_brightness;
+		runtimeBrightness = new_brightness*255/100;
 		dirtBright = true;
 		return true;
 	}
