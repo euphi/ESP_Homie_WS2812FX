@@ -31,7 +31,7 @@ WS2812Node::WS2812Node(const char* id, const char* name, uint8_t _mode, neoPixel
 		dirtBright(true), dirtMode(true), dirtSpeed(true),
 		dirtColor{true, true, true},
 		dirtWhite{usewhite, usewhite, usewhite},
-		runtimeBrightness(BRIGHTNESS_MAX), runtimeMode(_mode), runtimeSpeed(210) {
+		runtimeBrightness(BRIGHTNESS_MAX * 0.8), runtimeMode(_mode), runtimeSpeed(210) {
 	if (!settingsInitialized) {
 		settingsInitialized = true;
 		wsPin.setDefaultValue(LED_PIN).setValidator([] (long candidate) {
@@ -77,7 +77,7 @@ void WS2812Node::loop() {
 	if (dirtBright) {
 		ws2812fx.setBrightness(runtimeBrightness);
 		dirtBright = false;
-		if (connected) setProperty("brightness").send(String(ws2812fx.getBrightness()));
+		if (connected) setProperty("brightness").send(String(ws2812fx.getBrightness()*100/BRIGHTNESS_MAX));
 	}
 	if (dirtMode) {
 		ws2812fx.setMode(runtimeMode);
